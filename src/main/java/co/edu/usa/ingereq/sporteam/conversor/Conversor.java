@@ -33,7 +33,7 @@ public class Conversor {
         eventoDto.setLimite(evento.getLimite());
         eventoDto.setTipo(evento.getTipo());
         if (evento.getParticipantes() != null) {
-            eventoDto.setParticipantes(usuariosToDtos(evento.getParticipantes()));
+            //eventoDto.setParticipantes(usuariosToDtos(evento.getParticipantes()));
         }
         return eventoDto;
     }
