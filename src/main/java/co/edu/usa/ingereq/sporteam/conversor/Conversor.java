@@ -19,7 +19,6 @@ public class Conversor {
         apuestaDto.setEquipo(apuesta.getEquipo());
         apuestaDto.setId(apuesta.getId());
         apuestaDto.setValor(apuesta.getValor());
-        apuestaDto.setId_usuario(usuarioToDto(apuesta.getId_usuario()));
         apuestaDto.setId_partido(partidoToDto(apuesta.getId_partido()));
         return apuestaDto;
     }
