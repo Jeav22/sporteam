@@ -32,9 +32,6 @@ public class Conversor {
         eventoDto.setId(evento.getId());
         eventoDto.setLimite(evento.getLimite());
         eventoDto.setTipo(evento.getTipo());
-        if (evento.getParticipantes() != null) {
-            //eventoDto.setParticipantes(usuariosToDtos(evento.getParticipantes()));
-        }
         return eventoDto;
     }
 
@@ -48,12 +45,6 @@ public class Conversor {
         partidoDto.setMarcadorEquipo1(partido.getMarcadorEquipo1());
         partidoDto.setMarcadorEquipo2(partido.getMarcadorEquipo2());
         partidoDto.setUbicacion(partido.getUbicacion());
-        if (partido.getJugadores() != null) {
-            partidoDto.setJugadores(usuariosToDtos(partido.getJugadores()));
-        }
-        if (partido.getApostadores() != null) {
-            partidoDto.setApostadores(apuestasToDtos(partido.getApostadores()));
-        }
         return partidoDto;
     }
 
