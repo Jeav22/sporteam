@@ -60,6 +60,61 @@ foreign key(id_usuario) references usuario (id)
 
 insert into partido(ubicacion, fecha, equipo1, equipo2, marcadorequipo1, marcadorequipo2) values('Canchas la bolera','2018-03-20','Aguilas','Perros',2,1);
 
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Luzhniki, Moscu','2018-06-14','Rusia','A. Saudita');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Ekaterinburgo','2018-06-15','Egipto','Uruguay');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('San Petersburgo','2018-06-19','Rusia','Egipto');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Rostov Del Don','2018-06-20','Uruguay','A. Saudita');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Volgogrado','2018-06-25','A. Saudita','Egipto');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Samara','2018-06-25','Uruguay','Rusia');
+
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('San Petersburgo','2018-06-15','Marruecos','Iran');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Sochi','2018-06-15','Portugal','España');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Luzhniki, Moscu','2018-06-20','Portugal','Marruecos');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Kazán','2018-06-20','Iran','España');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Kaliningrado','2018-06-25','España','Marruecos');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Saransk','2018-06-25','Iran','Portugal');
+
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Kazán','2018-06-16','Francia','Australia');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Saransk','2018-06-16','Perú','Dinamarca');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Ekaterinburgo','2018-06-21','Francia','Perú');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Samara','2018-06-21','Dinamarca','Australia');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Sochi','2018-06-26','Australia','Perú');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Luzhniki, Moscu','2018-06-26','Dinamarca','Francia');
+
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Del Spartak, Moscu','2018-06-16','Argentina','Islandia');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Kaliningrado','2018-06-16','Croacia','Nigeria');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Nizhni Nóvgorod','2018-06-21','Argentina','Croacia');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Volgogrado','2018-06-22','Nigeria','Islandia');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Rostov Del Don','2018-06-26','Islandia','Croacia');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('San Petersburgo','2018-06-26','Nigeria','Argentina');
+
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Samara','2018-06-17','Costa Rica','Serbia');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Rostov Del Don','2018-06-17','Brasil','Suiza');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('San Petersburgo','2018-06-22','Brasil','Costa Rica');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Kaliningrado','2018-06-22','Serbia','Suiza');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Nizhni Nóvgorod','2018-06-27','Suiza','Costa Rica');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Del Spartak, Moscu','2018-06-27','Serbia','Brasil');
+
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Luzhniki, Moscu','2018-06-17','Alemania','México');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Nizhni Nóvgorod','2018-06-18','Suecia','C. del Sur');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Sochi','2018-06-23','Alemania','Suecia');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Rostov Del Don','2018-06-23','C. del Sur','México');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Ekaterinburgo','2018-06-27','México','Suecia');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Kazán','2018-06-27','C. del Sur','Alemania');
+
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Sochi','2018-06-18','Bélgica','Panamá');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Volgogrado','2018-06-18','Túnez','Inglaterra');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Del Spartak, Moscu','2018-06-23','Bélgica','Túnez');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Nizhni Nóvgorod','2018-06-24','Inglaterra','Panamá');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Saransk','2018-06-28','Panamá','Túnez');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Kaliningrado','2018-06-28','Inglaterra','Bélgica');
+
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Del Spartak, Moscu','2018-06-19','Polonia','Senegal');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Saransk','2018-06-19','Colombia','Japón');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Ekaterinburgo','2018-06-24','Japón','Senegal');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Kazán','2018-06-24','Polonia','Colombia');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Samara','2018-06-28','Senegal','Colombia');
+insert into partido(ubicacion, fecha, equipo1, equipo2) values('Volgogrado','2018-06-28','Japón','Polonia');
 
 INSERT INTO evento (fecha,limite,tipo,descripcion,direccion) VALUES ('2018-06-02',15,'Cucapatada','Cucapatada todos contra todos','Canchas la bolera');
 INSERT INTO evento (fecha,limite,tipo,descripcion,direccion) VALUES ('2018-06-02',6,'Canchitas','Mini futbol para jugar con el parche','Parque de la 93');
