@@ -1,6 +1,5 @@
 package co.edu.usa.ingereq.sporteam.dto;
 
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,7 +13,7 @@ public class EventoDto {
 
     private int id;
 
-    private Date fecha;
+    private String fecha;
     private int limite;
     private String tipo;
     private String descripcion;
@@ -35,11 +34,11 @@ public class EventoDto {
         this.id = id;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

@@ -1,7 +1,6 @@
 package co.edu.usa.ingereq.sporteam.jpa;
 
 import java.io.Serializable;
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -24,7 +23,7 @@ public class Partido implements Serializable {
     private int id;
 
     private String ubicacion;
-    private Date fecha;
+    private String fecha;
     private String equipo1;
     private String equipo2;
     private int marcadorEquipo1;
@@ -62,11 +61,11 @@ public class Partido implements Serializable {
         this.ubicacion = ubicacion;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

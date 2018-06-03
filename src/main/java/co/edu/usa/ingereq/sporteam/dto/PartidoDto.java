@@ -1,6 +1,5 @@
 package co.edu.usa.ingereq.sporteam.dto;
 
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,7 +14,7 @@ public class PartidoDto {
     private int id;
 
     private String ubicacion;
-    private Date fecha;
+    private String fecha;
     private String equipo1;
     private String equipo2;
     private int marcadorEquipo1;
@@ -49,11 +48,11 @@ public class PartidoDto {
         this.ubicacion = ubicacion;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

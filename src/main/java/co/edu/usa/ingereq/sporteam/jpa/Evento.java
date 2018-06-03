@@ -1,7 +1,6 @@
 package co.edu.usa.ingereq.sporteam.jpa;
 
 import java.io.Serializable;
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -22,7 +21,7 @@ public class Evento implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private Date fecha;
+    private String fecha;
     private int limite;
     private String tipo;
     private String descripcion;
@@ -47,11 +46,11 @@ public class Evento implements Serializable {
         this.id = id;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
