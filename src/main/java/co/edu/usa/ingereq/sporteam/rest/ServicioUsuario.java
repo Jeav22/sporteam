@@ -48,22 +48,23 @@ public class ServicioUsuario {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public Response crearUsuario(UsuarioDto usr) {
+    public UsuarioDto crearUsuario(UsuarioDto usr) {
         Usuario usuario = new Usuario();
         usuario = conversor.dtoToUsuario(usr);
 
         List<Usuario> usuarios = usuarioFachada.findAll();
         for (Usuario u : usuarios) {
             if (u.getCorreo().equalsIgnoreCase(usr.getCorreo())) {
-                return Response.status(Response.Status.FORBIDDEN).build();
+                return new UsuarioDto();
             }
         }
         try {
             usuarioFachada.save(usuario);
-            return Response.status(Response.Status.ACCEPTED).build();
+            return usr;
         } catch (Exception e) {
             e.printStackTrace();
-            return Response.status(Response.Status.FORBIDDEN).build();
+            System.out.println("error de guardado");
+            return new UsuarioDto();
         }
     }
 
