@@ -72,7 +72,7 @@ public class ServicioUsuario {
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public UsuarioDto loginUsuario(@FormParam("correo") String correo,
             @FormParam("contrasena") String contrasena) {
-
+        System.out.println("c: " + correo);
         List<UsuarioDto> usuarios = conversor.usuariosToDtos(usuarioFachada.findAll());
         for (UsuarioDto usuario : usuarios) {
             if (usuario.getCorreo().equalsIgnoreCase(correo) && usuario.getContrasena().equals(contrasena)) {
