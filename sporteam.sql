@@ -1271,14 +1271,25 @@ insert into usuario(nombre, celular, correo, contrasena, noIdentificacion) value
 insert into usuario(nombre, celular, correo, contrasena, noIdentificacion) values('Jorge Eduardo', '3023592109', 'jorge@mail.com', '1234', 345678912);
 insert into usuario(nombre, celular, correo, contrasena, noIdentificacion) values('Fabian Girlado', '304051821', 'fabian@mail.com', '1234', 456789123);
 
+insert into apuesta(valor, equipo, id_partido, id_usuario) values(23000, 'España', 9, 1);
+insert into apuesta(valor, equipo, id_partido, id_usuario) values(23000, 'España', 12, 1);
+
 insert into apuesta(valor, equipo, id_partido, id_usuario) values(23000, 'Aguilas', 1, 3);
 insert into apuesta(valor, equipo, id_partido, id_usuario) values(23000, 'Perros', 1, 4);
 
 insert into jugadores(id_partido, id_usuario) values (1, 1);
+insert into jugadores(id_partido, id_usuario) values (2, 1);
+insert into jugadores(id_partido, id_usuario) values (3, 1);
+insert into jugadores(id_partido, id_usuario) values (4, 1);
+
 insert into jugadores(id_partido, id_usuario) values (1, 2);
-insert into jugadores(id_partido, id_usuario) values (1, 4);
+insert into jugadores(id_partido, id_usuario) values (5, 2);
+insert into jugadores(id_partido, id_usuario) values (6, 2);
+
+insert into jugadores(id_partido, id_usuario) values (7, 4);
 
 insert into participantes(id_evento, id_usuario) values(1, 1);
+insert into participantes(id_evento, id_usuario) values(2, 1);
 insert into participantes(id_evento, id_usuario) values(1, 2);
 insert into participantes(id_evento, id_usuario) values(1, 3);
 insert into participantes(id_evento, id_usuario) values(1, 4);

@@ -54,7 +54,7 @@ public class ServicioUsuario {
 
         List<Usuario> usuarios = usuarioFachada.findAll();
         for (Usuario u : usuarios) {
-            if (u.getCorreo().equalsIgnoreCase(usr.getCorreo())) {
+            if (u.getCorreo().equalsIgnoreCase(usr.getCorreo()) || u.getNoIdentificacion() == usr.getNoIdentificacion()) {
                 return new UsuarioDto();
             }
         }

@@ -114,7 +114,9 @@ public class Conversor {
         apuesta.setEquipo(apuestaDto.getEquipo());
         apuesta.setId(apuestaDto.getId());
         apuesta.setValor(apuestaDto.getValor());
-        apuesta.setId_usuario(dtoToUsuario(apuestaDto.getId_usuario()));
+        if (apuestaDto.getId_usuario() != null) {
+            apuesta.setId_usuario(dtoToUsuario(apuestaDto.getId_usuario()));
+        }
         apuesta.setId_partido(dtoToPartido(apuestaDto.getId_partido()));
         return apuesta;
     }
@@ -166,7 +168,7 @@ public class Conversor {
         if (u.getEventos() != null) {
             usuario.setEventos(dtosToEventos(u.getEventos()));
         }
-        if (u.getPartidos()!=null) {
+        if (u.getPartidos() != null) {
             usuario.setPartidos(dtosToPartidos(u.getPartidos()));
         }
         return usuario;
