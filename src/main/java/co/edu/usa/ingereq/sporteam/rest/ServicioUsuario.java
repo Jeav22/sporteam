@@ -69,13 +69,12 @@ public class ServicioUsuario {
 
     @POST
     @Path("/login")
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public UsuarioDto loginUsuario(@FormParam("correo") String correo,
-            @FormParam("contrasena") String contrasena) {
-        System.out.println("c: " + correo);
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public UsuarioDto loginUsuario(UsuarioDto usr) {
         List<UsuarioDto> usuarios = conversor.usuariosToDtos(usuarioFachada.findAll());
         for (UsuarioDto usuario : usuarios) {
-            if (usuario.getCorreo().equalsIgnoreCase(correo) && usuario.getContrasena().equals(contrasena)) {
+            if (usuario.getCorreo().equalsIgnoreCase(usr.getCorreo()) && usuario.getContrasena().equals(usr.getContrasena())) {
                 System.out.println("ok");
                 return usuario;
             }
