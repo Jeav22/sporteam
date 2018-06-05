@@ -22,7 +22,7 @@ public class Conversor {
         apuestaDto.setId_partido(partidoToDto(apuesta.getId_partido()));
         return apuestaDto;
     }
-    
+
     public EventoDto eventoToDto(Evento evento) {
         EventoDto eventoDto = new EventoDto();
         eventoDto.setDescripcion(evento.getDescripcion());
@@ -33,7 +33,7 @@ public class Conversor {
         eventoDto.setTipo(evento.getTipo());
         return eventoDto;
     }
-    
+
     public PartidoDto partidoToDto(Partido partido) {
         PartidoDto partidoDto = new PartidoDto();
         partidoDto.setApuesta(partido.getApuesta());
@@ -46,7 +46,7 @@ public class Conversor {
         partidoDto.setUbicacion(partido.getUbicacion());
         return partidoDto;
     }
-    
+
     public UsuarioDto usuarioToDto(Usuario u) {
         UsuarioDto usuarioDto = new UsuarioDto();
         usuarioDto.setCelular(u.getCelular());
@@ -77,7 +77,7 @@ public class Conversor {
         }
         return apuestaDtos;
     }
-    
+
     public List<EventoDto> eventosToDtos(List<Evento> eventos) {
         List<EventoDto> eventoDtos = new ArrayList<>();
         for (Evento evento : eventos) {
@@ -87,7 +87,7 @@ public class Conversor {
         }
         return eventoDtos;
     }
-    
+
     public List<PartidoDto> partidosToDtos(List<Partido> partidos) {
         List<PartidoDto> partidoDtos = new ArrayList<>();
         for (Partido partido : partidos) {
@@ -97,7 +97,7 @@ public class Conversor {
         }
         return partidoDtos;
     }
-    
+
     public List<UsuarioDto> usuariosToDtos(List<Usuario> usuario) {
         List<UsuarioDto> usuarioDtos = new ArrayList<>();
         for (Usuario u : usuario) {
@@ -120,7 +120,7 @@ public class Conversor {
         apuesta.setId_partido(dtoToPartido(apuestaDto.getId_partido()));
         return apuesta;
     }
-    
+
     public Evento dtoToEvento(EventoDto eventoDto) {
         Evento evento = new Evento();
         evento.setDescripcion(eventoDto.getDescripcion());
@@ -134,7 +134,7 @@ public class Conversor {
         }
         return evento;
     }
-    
+
     public Partido dtoToPartido(PartidoDto partidoDto) {
         Partido partido = new Partido();
         partido.setApuesta(partidoDto.getApuesta());
@@ -153,7 +153,7 @@ public class Conversor {
         }
         return partido;
     }
-    
+
     public Usuario dtoToUsuario(UsuarioDto u) {
         Usuario usuario = new Usuario();
         usuario.setCelular(u.getCelular());
@@ -175,7 +175,10 @@ public class Conversor {
             }
         }
         if (u.getPartidos() != null) {
-            usuario.setPartidos(dtosToPartidos(u.getPartidos()));
+            List<Partido> partidos = dtosToPartidos(u.getPartidos());
+            for (Partido partido : partidos) {
+                usuario.addPartido(partido);
+            }
         }
         return usuario;
     }
@@ -190,7 +193,7 @@ public class Conversor {
         }
         return apuestas;
     }
-    
+
     public List<Evento> dtosToEventos(List<EventoDto> eventoDtos) {
         List<Evento> eventos = new ArrayList<>();
         for (EventoDto eventoDto : eventoDtos) {
@@ -200,7 +203,7 @@ public class Conversor {
         }
         return eventos;
     }
-    
+
     public List<Partido> dtosToPartidos(List<PartidoDto> partidoDtos) {
         List<Partido> partidos = new ArrayList<>();
         for (PartidoDto partidoDto : partidoDtos) {
@@ -210,7 +213,7 @@ public class Conversor {
         }
         return partidos;
     }
-    
+
     public List<Usuario> dtosToUsuarios(List<UsuarioDto> usuarioDtos) {
         List<Usuario> usuarios = new ArrayList<>();
         for (UsuarioDto u : usuarioDtos) {
@@ -220,5 +223,5 @@ public class Conversor {
         }
         return usuarios;
     }
-    
+
 }
