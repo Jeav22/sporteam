@@ -70,16 +70,16 @@ public class ServicioUsuario {
     @POST
     @Path("/login")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response loginUsuario(@FormParam("correo") String correo,
+    public UsuarioDto loginUsuario(@FormParam("correo") String correo,
             @FormParam("contrasena") String contrasena) {
 
         List<Usuario> usuarios = usuarioFachada.findAll();
         for (Usuario usuario : usuarios) {
             if (usuario.getCorreo().equalsIgnoreCase(correo) && usuario.getContrasena().equals(contrasena)) {
-                return Response.status(Response.Status.ACCEPTED).build();
+                return conversor.usuarioToDto(usuario);
             }
         }
-        return Response.status(Response.Status.FORBIDDEN).build();
+        return new UsuarioDto();
     }
 
     @PUT
