@@ -73,10 +73,11 @@ public class ServicioUsuario {
     public UsuarioDto loginUsuario(@FormParam("correo") String correo,
             @FormParam("contrasena") String contrasena) {
 
-        List<Usuario> usuarios = usuarioFachada.findAll();
-        for (Usuario usuario : usuarios) {
+        List<UsuarioDto> usuarios = conversor.usuariosToDtos(usuarioFachada.findAll());
+        for (UsuarioDto usuario : usuarios) {
             if (usuario.getCorreo().equalsIgnoreCase(correo) && usuario.getContrasena().equals(contrasena)) {
-                return conversor.usuarioToDto(usuario);
+                System.out.println("ok");
+                return usuario;
             }
         }
         return new UsuarioDto();
