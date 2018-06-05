@@ -46,7 +46,6 @@ public class ServicioUsuario {
     }
 
     @POST
-    @Path("/add")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response crearUsuario(UsuarioDto usr) {
@@ -69,6 +68,7 @@ public class ServicioUsuario {
     }
 
     @POST
+    @Path("/login")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Response loginUsuario(@FormParam("correo") String correo,
             @FormParam("contrasena") String contrasena) {

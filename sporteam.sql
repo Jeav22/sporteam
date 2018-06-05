@@ -2,7 +2,7 @@
 create table partido(
 id serial not null,
 ubicacion varchar(30) not null,
-fecha date not null,
+fecha varchar not null,
 equipo1 varchar(30) not null,
 equipo2 varchar(30) not null,
 marcadorequipo1 int,
@@ -13,7 +13,7 @@ primary key(id)
 
 create table evento(
 id serial not null,
-fecha date not null,
+fecha varchar not null,
 limite int not null,
 tipo varchar(30) not null,
 descripcion varchar(350) not null,
